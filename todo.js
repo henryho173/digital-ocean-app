@@ -94,3 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function httpGetAsync(https://api.airtable.com/v0/appdAtXcDOnewVGJV/Stocks?api_key=keyvYbgeiGc37oIaa, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", https://api.airtable.com/v0/appdAtXcDOnewVGJV/Stocks?api_key=keyvYbgeiGc37oIaa, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
