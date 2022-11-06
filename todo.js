@@ -113,7 +113,7 @@ function displayCocktail(data) {
   const cocktail = data.drinks[0];
   const cocktailDiv = document.getElementById("cocktail");
   ...  
-}
+};
   const cocktailName = cocktail.strDrink;
   const heading = document.createElement("h1");
   heading.innerHTML = cocktailName;
