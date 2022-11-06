@@ -111,8 +111,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 
 function displayCocktail(data) {
   const cocktail = data.drinks[0];
-  const cocktailDiv = document.getElementById("cocktail");
-  ...  
+  const cocktailDiv = document.getElementById("cocktail")
 };
   const cocktailName = cocktail.strDrink;
   const heading = document.createElement("h1");
