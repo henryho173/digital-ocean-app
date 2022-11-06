@@ -115,5 +115,4 @@ function displayCocktail(data) {
   const cocktailName = cocktail.strDrink;
   const heading = document.createElement("h1");
   heading.innerHTML = cocktailName;
-  cocktailDiv.appendChild(heading);
 }  
