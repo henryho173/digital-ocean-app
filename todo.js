@@ -95,13 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function httpGetAsync(https://api.airtable.com/v0/appdAtXcDOnewVGJV/Stocks?api_key=keyvYbgeiGc37oIaa, callback)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", https://api.airtable.com/v0/appdAtXcDOnewVGJV/Stocks?api_key=keyvYbgeiGc37oIaa, true); // true for asynchronous 
-    xmlHttp.send(null);
+fetch(‘https://rickandmortyapi.com/api/character/’)
+   .then(response => response.json())
+   .then(characters => showCharacters(characters.results));
+
+showCharacters = characters => {
+  const charactersDiv = document.querySelector(‘#rick-and-morty-  characters’);
+  characters.forEach(character => {
+    const characterElement = document.createElement(‘p’);
+    characterElement.innerText = `Character Name: ${character.name}`;
+    charactersDiv.append(characterElement);
+  });
 }
